@@ -13,7 +13,7 @@ namespace SayHello_Endpoint.Controllers;
         [Route("/UserName/{name}")]
         public List<string> UserName(string name)
         {
-            studentName.Add("Hello, "+name);
+            studentName.Add("Hello, "+name+".");
             return studentName;
         }
 
