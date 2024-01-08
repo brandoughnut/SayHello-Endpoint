@@ -6,15 +6,12 @@ namespace SayHello_Endpoint.Controllers;
 [Route("[controller]")]
     public class SayHelloController
     {
-        
-        public List<string> studentName = new();
 
-        [HttpPost]
+        [HttpGet]
         [Route("/UserName/{name}")]
-        public List<string> UserName(string name)
+        public string UserName(string name)
         {
-            studentName.Add("Hello, "+name+".");
-            return studentName;
+            return $"Hello, {name} have a nice day!";
         }
 
     }
